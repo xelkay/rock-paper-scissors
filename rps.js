@@ -3,12 +3,14 @@ let playerScore = 0;
 let computerScore = 0;
     
 function getComputerChoice() {
-    let things = ['rock', 'paper', 'scissors'];
+    let things = ["rock", "paper", "scissors"];
     let thing = things[Math.floor(Math.random()*things.length)];
     return thing;
 }
 
 function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
 
 
     if (playerSelection===computerSelection) {
